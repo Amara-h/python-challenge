@@ -46,7 +46,9 @@ list_votes = list(candidate_votes.value())
 print("Winner is" + str(list(candidate_votes.keys())[list(candidate_votes.value()).index(max(list_votes))]))
 
 
-
+# write the result in a text file
+text_file = Path("python-challenge", "PyPoll", "Analysis", "Summary.txt")
+with open()
 
 
 

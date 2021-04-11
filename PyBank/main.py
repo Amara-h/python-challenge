@@ -48,7 +48,7 @@ print(f"Greatest Decrease in Profit: {total_months[max_dec_month]} (${(str(max_d
 
 # create text file
 
-text_file = Path("python-challenge", "Pybank", "analysis", "Summary.txt")
+text_file = Path("python-challenge", "PyBank", "Analysis", "Summary.txt")
 
 with open(text_file, "w") as file:
      file.write("Financial Analysis")
