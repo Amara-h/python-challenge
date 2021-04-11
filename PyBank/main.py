@@ -35,14 +35,29 @@ max_inc_month = monthly_profit_change.index(max(monthly_profit_change))+1
 max_dec_month = monthly_profit_change.index(min(monthly_profit_change))+1
 
 
-#print the result 
+#print the results 
 
 print("Financial Analysis")
 print("------------------------------")
 print(f"Total Months: {len(total_months)}")
+print(f"Total: ${sum(total_profit)}")
+print(f"Average Change: {round(sum(monthly_profit_change)/len(monthly_profit_change)),2}")
+print(f"Greatest Increase in Profit: {total_months[max_inc_month]} (${(str(max_inc_value))})")
+print(f"Greatest Decrease in Profit: {total_months[max_dec_month]} (${(str(max_dec_value))})")
 
 
+# create text file
 
+text_file = Path("python-challenge", "Pybank", "analysis", "Summary.txt")
+
+with open(text_file, "w") as file:
+     file.write("Financial Analysis")
+     file.write("----------------------------")
+     file.write(f"Total Months: {len(total_months)}")
+     file.write(f"Total: ${sum(total_profit)}")
+     file.write(f"Average Change: {round(sum(monthly_profit_change)/len(monthly_profit_change)),2}")
+     file.write(f"Greatest Increase in Profit: {total_months[max_inc_month]} (${(str(max_inc_value))})")
+     file.write(f"Greatest Decrease in Profit: {total_months[max_dec_month]} (${(str(max_dec_value))})")
 
 
 
