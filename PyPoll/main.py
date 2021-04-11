@@ -10,7 +10,34 @@ with open(csv_path, 'r', newline='') as csv_reader:
 #skip the header     
      next(csv_reader)
 
+     #set variable
+     total_votes = 0
+     current_candidate = ""
+     condidate_votes = {}
+     condidates = []
 
+ # loop through the rows
+for row in csv_reader:
+     total_votes = total_votes + 1 
+     current_candidate = row[candidate]
+
+     if current_candidate not in candidates:
+          candidates.append(current_condidate)
+          candidate_votes[current_condidate] = 1
+
+     else:
+
+            candidate_votes[current_candidate] = candidate_votes[current_candidate] + 1
+
+# print the result 
+print(f"Election results:")
+print("-------------------------------------")
+print(f"Total Votes: {total_votes}")
+print("-------------------------------------")
+for cv in candidate_votes:
+    print(cv + ": " + str(round(((candidate_votes[cv]/total_votes)*100),3)) + "%" + " (" + str(candidate_votes[cv]) + ")") 
+print("-------------------------------------")
+ 
 
 
 

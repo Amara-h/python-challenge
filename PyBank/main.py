@@ -3,7 +3,7 @@ import os
 # import csv module to read csv files 
 import csv
 # set a path to budget_data.cvs
-budget_data = os.path.join('..', 'Pybank', 'budget_date.csv')
+budget_data = os.path.join('..', 'PyBank', 'budget_date.csv')
 #read csv file
 with open(budget_data, newline='') as csvreader:
      csvreader = csv.reader(budget_data, delimiter=',')
