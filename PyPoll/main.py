@@ -48,7 +48,22 @@ print("Winner is" + str(list(candidate_votes.keys())[list(candidate_votes.value(
 
 # write the result in a text file
 text_file = Path("python-challenge", "PyPoll", "Analysis", "Summary.txt")
-with open()
+with open(text_file, "w") as text_file:
+
+    txt_file.write("Election results:")
+  
+    txt_file.write("-------------------------------------")
+  
+    txt_file.write("Total Votes: " + str(total_votes))
+   
+    
+  
+    for cv in candidate_votes:
+        txt_file.write(cv + ": " + str(round(((candidate_votes[cv]/total_votes)*100),3)) + "%" + " (" + str(candidate_votes[cv]) + ")") 
+           
+    txt_file.write("Winner is " + str(list(candidate_votes.keys())[list(candidate_votes.values()).index(max(list_votes))]))
+   
+
 
 
 
