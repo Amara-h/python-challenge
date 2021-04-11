@@ -10,14 +10,27 @@ with open(csv_path, 'r', newline='') as csv_reader:
 #skip the header     
      next(csv_reader)
 
-# count months 
-months = []
-profit_loss = []
-month = 0 
+# creat lists to truck my variables 
+
+total_months = []
+total_profit = []
+monthly_profit_change = []
+
+
 for row in csv_reader:
-    months.append(row[0]) 
-    profit_loss.append(row[1])
-    month += 1
+     total_months.append(row[0])
+     total_profit.append(int(row[1]))
+
+
+for i in range(len(total_profit)-1):
+     monthly_profit_change.append(total_profit[i+1]-total_profit[i])
+      
+
+
+
+
+
+
 
 
 
