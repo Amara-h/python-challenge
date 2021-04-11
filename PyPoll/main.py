@@ -19,7 +19,7 @@ with open(csv_path, 'r', newline='') as csv_reader:
  # loop through the rows
 for row in csv_reader:
      total_votes = total_votes + 1 
-     current_candidate = row[candidate]
+     current_candidate = row["candidate"]
 
      if current_candidate not in candidates:
           candidates.append(current_condidate)
@@ -39,7 +39,11 @@ for cv in candidate_votes:
 print("-------------------------------------")
  
 
+#print the winner
 
+list_votes = list(candidate_votes.value())
+
+print("Winner is" + str(list(candidate_votes.keys())[list(candidate_votes.value()).index(max(list_votes))]))
 
 
 
